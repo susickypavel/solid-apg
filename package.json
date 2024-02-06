@@ -7,7 +7,7 @@
         "pnpm": ">=8"
     },
     "keywords": [
-        "Solid",
+        "Solid.js",
         "WAI-ARIA",
         "ARIA-APG"
     ],
