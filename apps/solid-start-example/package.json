@@ -1,0 +1,16 @@
+{
+    "name": "solid-start-example",
+    "type": "module",
+    "scripts": {
+        "dev": "vinxi dev",
+        "build": "vinxi build",
+        "start": "vinxi start"
+    },
+    "dependencies": {
+        "@solidjs/meta": "^0.29.2",
+        "@solidjs/router": "^0.11.2",
+        "@solidjs/start": "^0.5.1",
+        "solid-js": "^1.8.14",
+        "vinxi": "^0.2.1"
+    }
+}
