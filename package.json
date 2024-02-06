@@ -1,7 +1,11 @@
 {
 	"private": true,
-	"name": "solid-apg",
+	"name": "root",
 	"description": "UI toolkit of accessible low-level Solid.js primitives",
+	"engines": {
+		"node": ">=18",
+		"pnpm": ">=8"
+	},
 	"keywords": [
 		"Solid",
 		"WAI-ARIA",
