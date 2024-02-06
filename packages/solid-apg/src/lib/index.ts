@@ -1,3 +1,11 @@
-import {} from "solid-js";
+export function createCheckbox() {
+	const root = (el: HTMLElement, accessor: any) => {
+		console.log(el);
+	};
 
-export function test() {}
+	return {
+		elements: {
+			root
+		}
+	};
+}

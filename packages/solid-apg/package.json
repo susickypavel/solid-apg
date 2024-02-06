@@ -10,6 +10,9 @@
         "name": "Pavel Sušický",
         "url": "https://frontendista.cz"
     },
+    "files": [
+        "src"
+    ],
     "devDependencies": {
         "solid-js": "^1.8.14"
     },
