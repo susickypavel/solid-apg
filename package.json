@@ -1,20 +1,20 @@
 {
-	"private": true,
-	"name": "root",
-	"description": "UI toolkit of accessible low-level Solid.js primitives",
-	"engines": {
-		"node": ">=18",
-		"pnpm": ">=8"
-	},
-	"keywords": [
-		"Solid",
-		"WAI-ARIA",
-		"ARIA-APG"
-	],
-	"author": {
-		"email": "me@frontendista.cz",
-		"name": "Pavel Sušický",
-		"url": "https://frontendista.cz"
-	},
-	"license": "MIT"
+    "private": true,
+    "name": "root",
+    "description": "UI toolkit of accessible low-level Solid.js primitives",
+    "engines": {
+        "node": ">=18",
+        "pnpm": ">=8"
+    },
+    "keywords": [
+        "Solid",
+        "WAI-ARIA",
+        "ARIA-APG"
+    ],
+    "author": {
+        "email": "me@frontendista.cz",
+        "name": "Pavel Sušický",
+        "url": "https://frontendista.cz"
+    },
+    "license": "MIT"
 }
