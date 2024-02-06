@@ -1,0 +1,16 @@
+{
+	"private": true,
+	"name": "solid-apg",
+	"description": "UI toolkit of accessible low-level Solid.js primitives",
+	"keywords": [
+		"Solid",
+		"WAI-ARIA",
+		"ARIA-APG"
+	],
+	"author": {
+		"email": "me@frontendista.cz",
+		"name": "Pavel Sušický",
+		"url": "https://frontendista.cz"
+	},
+	"license": "MIT"
+}
