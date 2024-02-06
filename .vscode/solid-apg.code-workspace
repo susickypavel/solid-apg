@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "✨ root",
+			"path": ".."
+		},
+		{
+			"name": "📦 solid-apg",
+			"path": "../packages/solid-apg"
+		}
+	],
+	"settings": {}
+}

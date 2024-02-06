@@ -1,0 +1,19 @@
+{
+    "name": "solid-apg",
+    "version": "0.1.0-alpha.1",
+    "scripts": {
+        "build": ""
+    },
+    "license": "MIT",
+    "author": {
+        "email": "me@frontendista.cz",
+        "name": "Pavel Sušický",
+        "url": "https://frontendista.cz"
+    },
+    "devDependencies": {
+        "solid-js": "^1.8.14"
+    },
+    "peerDependencies": {
+        "solid-js": "^1.8.14"
+    }
+}
