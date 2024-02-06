@@ -9,6 +9,10 @@
 			"path": "../apps/solid-start-example"
 		},
 		{
+			"name": "📙 docs",
+			"path": "../docs"
+		},
+		{
 			"name": "📦 solid-apg",
 			"path": "../packages/solid-apg"
 		}
