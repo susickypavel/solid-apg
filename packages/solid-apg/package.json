@@ -2,7 +2,10 @@
     "name": "solid-apg",
     "version": "0.1.0-alpha.1",
     "scripts": {
-        "build": ""
+        "build": "run-s cleanup package",
+        "package": "tsup",
+        "cleanup": "rimraf dist",
+        "prepublishOnly": "run-s build"
     },
     "license": "MIT",
     "author": {
@@ -11,12 +14,22 @@
         "url": "https://frontendista.cz"
     },
     "files": [
-        "src"
+        "dist"
     ],
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "solid": "./dist/index.js"
+        }
+    },
     "devDependencies": {
-        "solid-js": "^1.8.14"
+        "solid-js": "^1.8.14",
+        "tsup": "^8.0.2"
     },
     "peerDependencies": {
         "solid-js": "^1.8.14"
-    }
+    },
+    "solid": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "type": "module"
 }

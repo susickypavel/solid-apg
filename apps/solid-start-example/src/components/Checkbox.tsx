@@ -1,6 +1,6 @@
 "use client";
 
-import { createCheckbox } from "solid-apg/src/lib";
+import { createCheckbox } from "solid-apg";
 
 export default function Checkbox() {
 	const {
