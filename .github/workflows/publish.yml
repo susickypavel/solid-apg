@@ -8,6 +8,9 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    environment:
+      name: solid-apg
+      url: https://npmjs.com/package/solid-apg
 
     steps:
       - uses: actions/checkout@v4
