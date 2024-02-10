@@ -1,6 +1,11 @@
 {
     "name": "solid-apg",
     "version": "0.1.0-alpha.2",
+    "keywords": [
+        "solidjs",
+        "apg",
+        "waiaria"
+    ],
     "scripts": {
         "build": "run-s cleanup package",
         "package": "tsup",
