@@ -1,20 +1,30 @@
-import { createSignal, mergeProps } from "solid-js";
+import { mergeProps, onCleanup } from "solid-js";
 import { createStore } from "solid-js/store";
 
 import type { Arguments } from "./types";
 
 const attributes = {
-	role: "checkbox"
+	role: "checkbox",
+	type: "button"
 };
 
 export function createCheckbox(args: Arguments = {}) {
-	const [isDisabled, setDisabled] = createSignal(args.disabled || false);
-
 	const [props, setProps] = createStore({
 		"aria-checked": false
 	});
 
-	const root = (el: HTMLElement, accessor: any) => {};
+	const root = (el: HTMLElement, accessor: any) => {
+		function toggle() {
+			setProps("aria-checked", !props["aria-checked"]);
+		}
+
+		el.addEventListener("click", toggle);
+
+		onCleanup(() => {
+			el.removeEventListener("click", toggle);
+		});
+	};
+
 	const input = (el: HTMLInputElement, accessor: any) => {};
 
 	return {
@@ -22,13 +32,6 @@ export function createCheckbox(args: Arguments = {}) {
 			root,
 			input
 		},
-		props: mergeProps(
-			props,
-			{
-				disabled: isDisabled(),
-				["aria-disabled"]: isDisabled()
-			},
-			attributes
-		)
+		props: mergeProps(props, attributes)
 	};
 }
