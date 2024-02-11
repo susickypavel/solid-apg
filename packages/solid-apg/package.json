@@ -10,7 +10,8 @@
         "build": "run-s cleanup package",
         "package": "tsup",
         "cleanup": "rimraf dist",
-        "prepublishOnly": "run-s build"
+        "prepublishOnly": "run-s build",
+        "test:unit": "vitest"
     },
     "license": "MIT",
     "author": {
@@ -28,8 +29,13 @@
         }
     },
     "devDependencies": {
+        "@solidjs/testing-library": "^0.8.6",
+        "happy-dom": "^13.3.8",
         "solid-js": "^1.8.14",
-        "tsup": "^8.0.2"
+        "tsup": "^8.0.2",
+        "vite": "^5.1.1",
+        "vite-plugin-solid": "^2.9.1",
+        "vitest": "^1.2.2"
     },
     "peerDependencies": {
         "solid-js": "^1.8.14"

@@ -1,1 +1,1 @@
-export { createCheckbox } from "./lib/Checkbox";
+export { createCheckbox } from "./lib/checkbox";
