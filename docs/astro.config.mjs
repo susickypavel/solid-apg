@@ -1,27 +1,27 @@
-import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import { defineConfig } from "astro/config";
+import starlight from "@astrojs/starlight";
 
-// https://astro.build/config
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: "Solid APG",
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: "https://github.com/susickypavel/solid-apg"
 			},
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', link: '/guides/example/' },
-					],
+					label: "Tutorial",
+					autogenerate: {
+						directory: "tutorial"
+					}
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
-				},
-			],
-		}),
-	],
+					label: "Primitives",
+					autogenerate: {
+						directory: "primitives"
+					}
+				}
+			]
+		})
+	]
 });
