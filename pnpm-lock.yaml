@@ -29,9 +29,6 @@ importers:
       '@solidjs/start':
         specifier: ^0.5.1
         version: 0.5.1(solid-js@1.8.14)(vinxi@0.2.1)(vite@5.0.12)
-      solid-apg:
-        specifier: workspace:0.1.0-alpha.1
-        version: link:../../packages/solid-apg
       solid-js:
         specifier: ^1.8.14
         version: 1.8.14
