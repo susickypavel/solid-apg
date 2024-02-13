@@ -17,5 +17,7 @@
 			"path": "../packages/solid-apg"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"css.validate": false
+	}
 }
