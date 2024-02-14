@@ -1,17 +1,18 @@
 import { createCheckbox } from "../../../../packages/solid-apg/src";
 
 export function Checkbox() {
-	const { elements, props } = createCheckbox();
+	const [elements, rootProps, inputProps, { setDisabled }] = createCheckbox();
 
 	const { root, input } = elements;
 
 	return (
 		<>
-			<button use:root {...props}>
-				<input use:input />
+			<button use:root {...rootProps()}>
+				Toggle
 			</button>
+			<input use:input {...inputProps()} />
 
-			<button>Odemknout</button>
+			<button onClick={() => setDisabled((value) => !value)}>diasble externally</button>
 		</>
 	);
 }

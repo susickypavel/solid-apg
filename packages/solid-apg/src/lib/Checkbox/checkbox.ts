@@ -1,5 +1,5 @@
-import { mergeProps, onCleanup } from "solid-js";
-import { createStore } from "solid-js/store";
+import { createEffect, createMemo, createSignal, mergeProps, on, onCleanup } from "solid-js";
+import { StoreNode, createMutable, createStore } from "solid-js/store";
 
 import type { Arguments } from "./types";
 
@@ -9,29 +9,58 @@ const attributes = {
 };
 
 export function createCheckbox(args: Arguments = {}) {
-	const [props, setProps] = createStore({
-		"aria-checked": false
-	});
+	const [isChecked, setChecked] = createSignal(false);
+	const [isDisabled, setDisabled] = createSignal(false);
 
-	const root = (el: HTMLElement, accessor: any) => {
-		function toggle() {
-			setProps("aria-checked", !props["aria-checked"]);
+	const root = (el: HTMLElement) => {};
+
+	const input = (el: HTMLInputElement) => {
+		createEffect(() => {
+			el.checked = isChecked();
+		});
+
+		function change() {
+			setChecked(el.checked);
 		}
 
-		el.addEventListener("click", toggle);
+		el.addEventListener("change", change);
 
 		onCleanup(() => {
-			el.removeEventListener("click", toggle);
+			el.removeEventListener("change", change);
 		});
 	};
 
-	const input = (el: HTMLInputElement, accessor: any) => {};
+	const rootProps = createMemo(
+		on([isDisabled, isChecked], ([isDisabled, isChecked]) => {
+			return {
+				disabled: isDisabled,
+				"aria-disabled": isDisabled,
+				"aria-checked": isChecked,
+				...attributes
+			};
+		})
+	);
 
-	return {
-		elements: {
+	const inputProps = createMemo(
+		on([isDisabled, isChecked], ([isDisabled, isChecked]) => {
+			return {
+				checked: isChecked,
+				disabled: isDisabled,
+				type: "checkbox"
+			};
+		})
+	);
+
+	return [
+		{
 			root,
 			input
 		},
-		props: mergeProps(props, attributes)
-	};
+		rootProps,
+		inputProps,
+		{
+			setChecked,
+			setDisabled
+		}
+	] as const;
 }

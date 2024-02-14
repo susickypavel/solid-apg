@@ -16,7 +16,25 @@ export function TestingForm() {
 	return (
 		<Form onSubmit={handleSubmit}>
 			<Field name="conditions" type="boolean">
-				{(field, props) => <Checkbox />}
+				{(field, props) => {
+					return (
+						<Checkbox
+							{...props}
+							// onChange={(e) => {
+							// 	console.log("change");
+							// 	props.onChange(e);
+							// }}
+							// onInput={(e) => {
+							// 	console.log("input");
+							// 	props.onInput(e);
+							// }}
+							// onBlur={(e) => {
+							// 	console.log("blur");
+							// 	props.onBlur(e);
+							// }}
+						/>
+					);
+				}}
 			</Field>
 			<button type="submit">Send</button>
 		</Form>
