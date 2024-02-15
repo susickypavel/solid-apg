@@ -28,6 +28,9 @@
             "solid": "./dist/index.js"
         }
     },
+    "publishConfig": {
+        "access": "public"
+    },
     "devDependencies": {
         "@solidjs/testing-library": "^0.8.6",
         "happy-dom": "^13.3.8",
