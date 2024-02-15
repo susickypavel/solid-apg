@@ -5,7 +5,7 @@ import type { Arguments } from "./types";
 const attributes = {
 	role: "checkbox",
 	type: "button"
-};
+} as const;
 
 export function createCheckbox(args: Arguments = {}) {
 	const [isChecked, setChecked] = createSignal(false);
