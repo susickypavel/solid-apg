@@ -1,5 +1,4 @@
-import { createEffect, createMemo, createSignal, mergeProps, on, onCleanup } from "solid-js";
-import { StoreNode, createMutable, createStore } from "solid-js/store";
+import { createEffect, createMemo, createSignal, on, onCleanup } from "solid-js";
 
 import type { Arguments } from "./types";
 
@@ -11,8 +10,6 @@ const attributes = {
 export function createCheckbox(args: Arguments = {}) {
 	const [isChecked, setChecked] = createSignal(false);
 	const [isDisabled, setDisabled] = createSignal(false);
-
-	const root = (el: HTMLElement) => {};
 
 	const input = (el: HTMLInputElement) => {
 		createEffect(() => {
@@ -53,7 +50,6 @@ export function createCheckbox(args: Arguments = {}) {
 
 	return [
 		{
-			root,
 			input
 		},
 		rootProps,

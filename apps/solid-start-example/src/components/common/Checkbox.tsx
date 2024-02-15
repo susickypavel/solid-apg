@@ -5,11 +5,11 @@ import { createCheckbox } from "../../../../../packages/solid-apg/src";
 export function Checkbox(_props: any) {
 	const [elements, rootProps, inputProps, { setDisabled }] = createCheckbox();
 
-	const { root, input } = elements;
+	const { input } = elements;
 
 	return (
 		<>
-			<label use:root {...rootProps()}>
+			<label {...rootProps()}>
 				Toggle
 				<input use:input {..._props} {...inputProps()} />
 			</label>
