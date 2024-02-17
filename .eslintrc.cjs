@@ -15,7 +15,14 @@ const config = {
 		"@typescript-eslint/no-namespace": "off",
 		"@typescript-eslint/no-explicit-any": "off",
 		"@typescript-eslint/triple-slash-reference": "off"
-	}
+	},
+	overrides: [
+		{
+			files: ["**/*.spec.{ts,tsx}"],
+			plugins: ["vitest"],
+			extends: ["plugin:vitest/recommended"]
+		}
+	]
 };
 
 module.exports = config;
