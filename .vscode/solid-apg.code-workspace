@@ -5,12 +5,12 @@
 			"path": ".."
 		},
 		{
-			"name": "🚀 solid-start-example",
-			"path": "../apps/solid-start-example"
+			"name": "🚀 solid-apg-docs",
+			"path": "../apps/docs"
 		},
 		{
-			"name": "📘 docs",
-			"path": "../docs"
+			"name": "🚀 solid-start-example",
+			"path": "../apps/solid-start-example"
 		},
 		{
 			"name": "📦 solid-apg",
