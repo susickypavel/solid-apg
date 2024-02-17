@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 env:
   pnpm-version: 8
-  node-version: 18
+  node-version: 20
 
 jobs:
   lint:
@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v3
         with:
           version: ${{ env.pnpm-version }}
           run_install: true
@@ -32,7 +32,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v3
         with:
           version: ${{ env.pnpm-version }}
           run_install: true
