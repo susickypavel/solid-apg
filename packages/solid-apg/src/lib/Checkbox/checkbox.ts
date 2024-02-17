@@ -1,13 +1,11 @@
 import { createEffect, createMemo, createSignal, on, onCleanup } from "solid-js";
 
-import type { Arguments } from "./types";
-
 const attributes = {
 	role: "checkbox",
 	type: "button"
 } as const;
 
-export function createCheckbox(args: Arguments = {}) {
+export function createCheckbox() {
 	const [isChecked, setChecked] = createSignal(false);
 	const [isDisabled, setDisabled] = createSignal(false);
 
