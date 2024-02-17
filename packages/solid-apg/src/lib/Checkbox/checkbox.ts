@@ -5,6 +5,9 @@ const attributes = {
 	type: "button"
 } as const;
 
+/**
+ * @link https://www.w3.org/WAI/ARIA/apg/patterns/checkbox
+ */
 export function createCheckbox() {
 	const [isChecked, setChecked] = createSignal(false);
 	const [isDisabled, setDisabled] = createSignal(false);
