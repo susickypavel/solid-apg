@@ -13,7 +13,18 @@ const configuration = (plop) => {
 			}
 		],
 		actions() {
-			return [];
+			return [
+				{
+					type: "add",
+					path: "../packages/solid-apg/src/lib/{{componentName}}/{{componentName}}.tsx",
+					templateFile: "templates/code/component-name.ts.hbs"
+				},
+				{
+					type: "add",
+					path: "../apps/docs/src/content/docs/primitives/{{componentName}}.mdx",
+					templateFile: "templates/docs/component-name.mdx.hbs"
+				}
+			];
 		}
 	});
 };

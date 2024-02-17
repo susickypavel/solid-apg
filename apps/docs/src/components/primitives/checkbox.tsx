@@ -1,4 +1,4 @@
-import { createCheckbox } from "../../../../packages/solid-apg/src";
+import { createCheckbox } from "../../../../../packages/solid-apg/src";
 
 export function Checkbox() {
 	const [elements, rootProps, inputProps, { setDisabled }] = createCheckbox();
