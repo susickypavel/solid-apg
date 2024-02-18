@@ -16,12 +16,27 @@ const configuration = (plop) => {
 			return [
 				{
 					type: "add",
-					path: "../packages/solid-apg/src/lib/{{componentName}}/{{componentName}}.tsx",
+					path: "../packages/solid-apg/src/lib/{{lowerCase componentName}}/{{lowerCase componentName}}.ts",
 					templateFile: "templates/code/component-name.ts.hbs"
 				},
 				{
 					type: "add",
-					path: "../apps/docs/src/content/docs/primitives/{{componentName}}.mdx",
+					path: "../packages/solid-apg/src/lib/{{lowerCase componentName}}/types.ts",
+					templateFile: "templates/code/types.ts.hbs"
+				},
+				{
+					type: "add",
+					path: "../packages/solid-apg/src/lib/{{lowerCase componentName}}/index.ts",
+					templateFile: "templates/code/index.ts.hbs"
+				},
+				{
+					type: "add",
+					path: "../packages/solid-apg/src/lib/{{lowerCase componentName}}/{{lowerCase componentName}}.spec.ts",
+					templateFile: "templates/code/component-name.spec.ts.hbs"
+				},
+				{
+					type: "add",
+					path: "../apps/docs/src/content/docs/primitives/{{lowerCase componentName}}.mdx",
 					templateFile: "templates/docs/component-name.mdx.hbs"
 				}
 			];
