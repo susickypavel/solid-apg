@@ -21,6 +21,14 @@ const config = {
 			files: ["**/*.spec.{ts,tsx}"],
 			plugins: ["vitest"],
 			extends: ["plugin:vitest/recommended"]
+		},
+		{
+			files: ["**/*.astro"],
+			parser: "astro-eslint-parser",
+			parserOptions: {
+				parser: "@typescript-eslint/parser",
+				extraFileExtensions: [".astro"]
+			}
 		}
 	]
 };
