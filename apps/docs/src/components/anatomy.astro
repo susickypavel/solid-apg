@@ -5,8 +5,10 @@ export interface Props {
 ---
 
 <figure>
-    <svg xmlns="http://www.w3.org/2000/svg" class="bg-sl-gray-6 border-sl-gray-5 border" width="720" height="512" viewBox="0 0 720 512" >
-        <slot />
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="bg-sl-gray-6 border-sl-gray-5 border" width="720" height="512" viewBox="0 0 720 512" >
+        <slot>
+            <text>Place your content into the slot.</text>
+        </slot>
     </svg>
     {Astro.props.caption ? <figcaption>XD</figcaption> : null}
 </figure>
