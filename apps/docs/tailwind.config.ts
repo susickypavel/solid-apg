@@ -6,6 +6,10 @@ const config: Config = {
 	content: ["./src/**/*.{astro,md,mdx,ts,tsx}"],
 	theme: {
 		extend: {
+			fontFamily: {
+				sans: ["Open Sans"],
+				mono: ["Jetbrains Mono"]
+			},
 			colors: {
 				sl: {
 					white: "var(--sl-color-white)",
