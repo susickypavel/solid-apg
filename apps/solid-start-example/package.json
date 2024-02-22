@@ -1,4 +1,5 @@
 {
+    "private": true,
     "name": "solid-start-example",
     "type": "module",
     "scripts": {
