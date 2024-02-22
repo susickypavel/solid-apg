@@ -1,4 +1,4 @@
 {
-    "recommendations": ["dbaeumer.vscode-eslint", "zixuanchen.vitest-explorer"],
+    "recommendations": ["dbaeumer.vscode-eslint", "vitest.explorer"],
     "unwantedRecommendations": []
 }
