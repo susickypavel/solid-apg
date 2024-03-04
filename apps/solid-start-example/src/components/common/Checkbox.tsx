@@ -1,20 +1,23 @@
 "use client";
 
+import { JSX, splitProps } from "solid-js";
 import { createCheckbox } from "../../../../../packages/solid-apg/src";
 
-export function Checkbox(_props: any) {
-	const [elements, rootProps, inputProps, { setDisabled }] = createCheckbox();
+interface CheckboxProps extends JSX.InputHTMLAttributes<HTMLInputElement> {
+	label: string;
+}
+
+export function Checkbox(props: CheckboxProps) {
+	const [local, attrs] = splitProps(props, ["label"]);
+
+	const [elements, rootProps, inputProps] = createCheckbox();
 
 	const { input } = elements;
 
 	return (
-		<>
-			<label {...rootProps()}>
-				Toggle
-				<input use:input {..._props} {...inputProps()} />
-			</label>
-
-			<button onClick={() => setDisabled((value) => !value)}>disable externally</button>
-		</>
+		<label {...rootProps()}>
+			{local.label}
+			<input use:input {...attrs} {...inputProps()} />
+		</label>
 	);
 }

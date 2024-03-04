@@ -16,27 +16,9 @@ export function TestingForm() {
 	return (
 		<Form onSubmit={handleSubmit}>
 			<Field name="conditions" type="boolean">
-				{(field, props) => {
-					return (
-						<Checkbox
-							{...props}
-							// onChange={(e) => {
-							// 	console.log("change");
-							// 	props.onChange(e);
-							// }}
-							// onInput={(e) => {
-							// 	console.log("input");
-							// 	props.onInput(e);
-							// }}
-							// onBlur={(e) => {
-							// 	console.log("blur");
-							// 	props.onBlur(e);
-							// }}
-						/>
-					);
-				}}
+				{(field, props) => <Checkbox label="I've read the terms & conditions." {...props} />}
 			</Field>
-			<button type="submit">Send</button>
+			<button type="submit">Submit form</button>
 		</Form>
 	);
 }

@@ -16,7 +16,7 @@ export default function FormVanilla() {
 				</div>
 
 				<div>
-					<label for="conditions">Agree to terms & conditions</label>
+					<label for="conditions">I've read the terms & conditions.</label>
 					<input name="conditions" type="checkbox" id="conditions" />
 				</div>
 
