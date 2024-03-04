@@ -28,6 +28,12 @@ export default defineConfig({
 					autogenerate: {
 						directory: "primitives"
 					}
+				},
+				{
+					label: "Resources",
+					autogenerate: {
+						directory: "resources"
+					}
 				}
 			]
 		})
