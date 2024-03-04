@@ -14,7 +14,8 @@ export default defineConfig({
 			title: "Solid APG",
 			customCss: ["./src/styles/tailwind.css", "./src/styles/font-face.css"],
 			social: {
-				github: "https://github.com/susickypavel/solid-apg"
+				github: "https://github.com/susickypavel/solid-apg",
+				email: "mailto:me@frontendista.cz"
 			},
 			sidebar: [
 				{
