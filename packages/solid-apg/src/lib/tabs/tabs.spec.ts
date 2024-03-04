@@ -1,9 +1,9 @@
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import { createRoot } from "solid-js";
 
-import { createAccordion } from "./accordion";
+import { createTabs } from "./tabs";
 
-describe("Accordion primitive", () => {
+describe("Tabs primitive", () => {
 	const inputEl = document.createElement("input");
 
 	beforeAll(() => {
@@ -16,7 +16,7 @@ describe("Accordion primitive", () => {
 
 	it("should pass", () => {
 		createRoot((dispose) => {
-			createAccordion();
+			createTabs();
 
 			expect(true).toBe(true);
 

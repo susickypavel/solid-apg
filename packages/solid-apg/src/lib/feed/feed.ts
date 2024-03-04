@@ -1,6 +1,6 @@
 /**
  * @link TODO
  */
-export function createAccordion() {
+export function createFeed() {
 	return [];
 }
