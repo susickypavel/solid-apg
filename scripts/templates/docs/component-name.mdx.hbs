@@ -7,27 +7,33 @@ sidebar:
         variant: danger
 ---
 
+import { Tabs, TabItem } from "@astrojs/starlight/components";
 import Playground from "@/components/playground.astro";
 import Anatomy from "@/components/anatomy.astro";
 
+```ts
+import { create{{componentName}} } from "solid-apg/{{lowerCase componentName}}";
+```
+
 ## Example
+
+<Tabs>
+<TabItem label="Playground">
 
 <Playground>
 	TODO
 </Playground>
 
-## Usage
+</TabItem>
+<TabItem label="Code">
 
-TODO
+```tsx
+// TODO
+```
 
-### Anatomy
+</TabItem>
+</Tabs>
+
+## Anatomy
 
 <Anatomy />
-
-### Code
-
-TODO
-
-## API
-
-TODO
