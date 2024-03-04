@@ -26,6 +26,36 @@
         ".": {
             "types": "./dist/index.d.ts",
             "solid": "./dist/index.js"
+        },
+        "./*": {
+            "types": "./dist/lib/*/iindex.d.ts",
+            "solid": "./dist/lib/*/index.js",
+            "default": "./dist/lib/*/index.js"
+        }
+    },
+    "typesVersions": {
+        "*": {
+            "carousel": [
+                "./dist/lib/carousel/index.d.ts"
+            ],
+            "checkbox": [
+                "./dist/lib/checkbox/index.d.ts"
+            ],
+            "feed": [
+                "./dist/lib/feed/index.d.ts"
+            ],
+            "spinbutton": [
+                "./dist/lib/spinbutton/index.d.ts"
+            ],
+            "tabs": [
+                "./dist/lib/tabs/index.d.ts"
+            ],
+            "toolbar": [
+                "./dist/lib/toolbar/index.d.ts"
+            ],
+            "tooltip": [
+                "./dist/lib/tooltip/index.d.ts"
+            ]
         }
     },
     "publishConfig": {
