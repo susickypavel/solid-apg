@@ -17,6 +17,9 @@ export default defineConfig({
 				github: "https://github.com/susickypavel/solid-apg",
 				email: "mailto:me@frontendista.cz"
 			},
+			editLink: {
+				baseUrl: "https://github.com/susickypavel/solid-apg/edit/main/apps/docs"
+			},
 			sidebar: [
 				{
 					label: "Introduction",
