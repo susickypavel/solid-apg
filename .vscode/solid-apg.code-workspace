@@ -15,6 +15,10 @@
 		{
 			"name": "📦 solid-apg",
 			"path": "../packages/solid-apg"
+		},
+		{
+			"name": "📦 solid-aria",
+			"path": "../packages/solid-aria"
 		}
 	],
 	"settings": {
