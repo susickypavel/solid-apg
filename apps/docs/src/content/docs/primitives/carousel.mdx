@@ -12,7 +12,7 @@ import { Tabs, TabItem } from "@astrojs/starlight/components";
 import Playground from "@/components/playground.astro";
 import Anatomy from "@/components/anatomy.astro";
 import Links from "@/components/links.astro";
-import PropTable from "@/components/tables/prop-table.astro";
+import PropTable, { CodeType } from "@/components/tables/prop-table.astro";
 
 a primitive for creating a carousel component.
 
@@ -35,12 +35,13 @@ import { createCarousel } from "solid-apg";
 	data={[
 		{
 			name: "Test",
-			type: "x",
+			type: CodeType.String,
 			description: "x",
 			default: "x"
 		},
 		{
-			name: "Test2"
+			name: "Test2",
+			type: CodeType.Number
 		}
 	]}
 />

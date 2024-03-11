@@ -1,8 +1,13 @@
 ---
+export enum CodeType {
+    String = "String",
+    Number = "Number"
+}
+
 interface PropDefinition {
     name: string
     description?: string
-    type?: string
+    type?: CodeType | string
     required?: boolean
     default?: string
 }
@@ -27,8 +32,10 @@ const { data } = Astro.props
             return (
                 <tr>
                     <td class="p-4">{row.name}</td>
-                    <td class="p-4">{row.type}</td>
-                    <td class="p-4">{row.default || "-"}</td>
+                    <td class="p-4">
+                        <code class="bg-sl-gray-5 px-2">{row.type}</code>
+                    </td>
+                    <td class="p-4">{row.default || "—"}</td>
                 </tr>
             )
         })}
