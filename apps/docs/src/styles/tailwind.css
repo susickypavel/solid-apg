@@ -2,6 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+@supports (color: oklch(0% 0 0)) {
+	:root {
+		--sl-color-accent-low: oklch(25.91% 0.17 269.43);
+		--sl-color-accent: oklch(52.26% 0.28 268.92);
+		--sl-color-accent-high: oklch(83.42% 0.08189876440972872 269.31139824863465);
+		--sl-color-white: oklch(100% 0 0);
+		--sl-color-gray-1: oklch(94.87% 0.02 264.53);
+		--sl-color-gray-2: oklch(81.4% 0.007 268.54);
+		--sl-color-gray-3: oklch(63.78% 0.017 273.72);
+		--sl-color-gray-4: oklch(46% 0.015 266.57);
+		--sl-color-gray-5: oklch(34.14% 0.016 270.9);
+		--sl-color-gray-6: oklch(27.31% 0.015 269.11);
+		--sl-color-black: oklch(20.97% 0.008 274.53);
+	}
+
+	:root[data-theme="light"] {
+		--sl-color-accent-low: oklch(87.82% 0.06 269.35);
+		--sl-color-accent: oklch(52.92% 0.28 268.98292192589673);
+		--sl-color-accent-high: oklch(31.78% 0.134 268.74);
+		--sl-color-white: oklch(20.97% 0.008 274.53);
+		--sl-color-gray-1: oklch(27.31% 0.015 269.11);
+		--sl-color-gray-2: oklch(34.14% 0.016 270.9);
+		--sl-color-gray-3: oklch(46% 0.015 266.57);
+		--sl-color-gray-4: oklch(63.78% 0.017 273.72);
+		--sl-color-gray-5: oklch(81.4% 0.007 268.54);
+		--sl-color-gray-6: oklch(94.87% 0.006 264.53);
+		--sl-color-gray-7: oklch(97.29% 0.003 264.54);
+		--sl-color-black: oklch(100% 0 0);
+	}
+}
+
 @layer utilities {
 	.dotted-grid {
 		background-image: radial-gradient(rgb(255 255 255 / 10%) 1px, transparent 0);
