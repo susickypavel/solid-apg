@@ -9,3 +9,7 @@
 		background-position: -19px -center;
 	}
 }
+
+.sl-markdown-content a:not(:where(.not-content *)) {
+	font-weight: 700;
+}

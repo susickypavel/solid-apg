@@ -42,7 +42,7 @@ import { Tabs, TabItem, Steps } from "@astrojs/starlight/components";
     </TabItem>
     </Tabs>
 
-2. Import the components you want to use in your application.
+2. Import the primitives you want.
 
     Most of the components is exported in the form of a subpackage. For example, to import and use the `Carousel` component, you would do the following:
 
@@ -54,6 +54,19 @@ import { Tabs, TabItem, Steps } from "@astrojs/starlight/components";
 
     ```tsx
     import { createCarousel } from "solid-apg";
+    ```
+
+3. Use the primitive to create your desired component.
+
+    ```tsx
+    import { createCarousel } from "solid-apg/carousel";
+
+    const App = () => {
+        const { props } = createCarousel();
+        return (
+            <div {...props}>....</div>
+        )
+    };
     ```
 
 </Steps>
