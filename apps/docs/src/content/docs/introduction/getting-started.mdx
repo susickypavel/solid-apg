@@ -12,42 +12,48 @@ It encompasses the logic for crafting accessible UI components while adhering to
 
 Make sure you have [Node.js >=18](https://nodejs.org/en) installed on your machine, along with a package manager of your choice.
 
-import { Tabs, TabItem } from "@astrojs/starlight/components";
+import { Tabs, TabItem, Steps } from "@astrojs/starlight/components";
 
-<Tabs>
-<TabItem label="npm">
+<Steps>
 
-```sh
-npm install solid-apg
-```
+1. Install the package using your package manager of choice.
 
-</TabItem>
-<TabItem label="pnpm">
+    <Tabs>
+    <TabItem label="npm">
 
-```sh
-pnpm install solid-apg
-```
+    ```sh
+    npm install solid-apg
+    ```
 
-</TabItem>
-<TabItem label="Yarn">
+    </TabItem>
+    <TabItem label="pnpm">
 
-```sh
-yarn install solid-apg
-```
+    ```sh
+    pnpm install solid-apg
+    ```
 
-</TabItem>
-</Tabs>
+    </TabItem>
+    <TabItem label="Yarn">
 
-### Usage
+    ```sh
+    yarn install solid-apg
+    ```
 
-Most of the components is exported in the form of a subpackage. For example, to import and use the `Carousel` component, you would do the following:
+    </TabItem>
+    </Tabs>
 
-```tsx
-import { createCarousel } from "solid-apg/carousel";
-```
+2. Import the components you want to use in your application.
 
-Alternatively, you can import the entire library and use the components directly:
+    Most of the components is exported in the form of a subpackage. For example, to import and use the `Carousel` component, you would do the following:
 
-```tsx
-import { createCarousel } from "solid-apg";
-```
+    ```tsx
+    import { createCarousel } from "solid-apg/carousel";
+    ```
+
+    Alternatively, you can import the entire library and use the components directly:
+
+    ```tsx
+    import { createCarousel } from "solid-apg";
+    ```
+
+</Steps>
