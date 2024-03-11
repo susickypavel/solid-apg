@@ -1,0 +1,31 @@
+---
+import { Icon } from "@astrojs/starlight/components"
+
+export interface Props {
+    github: string
+    w3c: string
+}
+
+const { github, w3c } = Astro.props
+---
+
+<ul class="list-none flex gap-4 flex-wrap pl-0 not-content font-mono [&>li]:grow">
+    <li>
+        <a href={w3c} class="hover:bg-sl-gray-5 hover:border-sl-gray-4 flex items-center gap-2 border-sl-gray-5 border bg-sl-gray-6 rounded-lg no-underline text-white" target="_blank">
+            <Icon name="seti:json" size="4rem" class="p-4" />
+            <div class="flex flex-col p-4 pl-0">
+                <span class="font-bold">View ARIA pattern</span>
+                <span class="text-sm text-sl-gray-2">W3C</span>
+            </div>
+        </a>
+    </li>
+    <li>
+        <a href={github} class="hover:bg-sl-gray-5 hover:border-sl-gray-4 flex items-center gap-2 border-sl-gray-5 border bg-sl-gray-6 rounded-lg no-underline text-white" target="_blank">
+            <Icon name="github" size="4rem" class="p-4" />
+            <div class="flex flex-col p-4 pl-0">
+                <span class="font-bold">View source code</span>
+                <span class="text-sm text-sl-gray-2">GitHub</span>
+            </div>
+        </a>
+    </li>
+</ul>

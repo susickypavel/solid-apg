@@ -8,15 +8,24 @@ sidebar:
 ---
 
 import { Tabs, TabItem } from "@astrojs/starlight/components";
+
 import Playground from "@/components/playground.astro";
 import Anatomy from "@/components/anatomy.astro";
+import Links from "@/components/links.astro";
 
 a primitive for creating a carousel component.
+
+<Links
+	github="https://github.com/susickypavel/solid-apg/tree/main/packages/solid-apg/src/lib/carousel"
+	w3c="https://www.w3.org/WAI/ARIA/apg/patterns/carousel"
+/>
 
 ## Anatomy
 
 ```ts
 import { createCarousel } from "solid-apg/carousel";
+// or
+import { createCarousel } from "solid-apg";
 ```
 
 ## Example
