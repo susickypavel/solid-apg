@@ -1,0 +1,36 @@
+---
+interface PropDefinition {
+    name: string
+    description?: string
+    type?: string
+    required?: boolean
+    default?: string
+}
+
+export interface Props {
+    data: PropDefinition[]
+}
+
+const { data } = Astro.props
+---
+
+<table style="display:table;" class="w-full rounded-lg bg-sl-gray-6 border-sl-gray-5 border not-content table-fixed font-mono">
+    <thead class="w-full text-left bg-sl-gray-5">
+        <tr>
+            <th class="p-4">Name</th>
+            <th class="p-4">Type</th>
+            <th class="p-4">Default value</th>
+        </tr>
+    </thead>
+    <tbody>
+        {data.map(row => {
+            return (
+                <tr>
+                    <td class="p-4">{row.name}</td>
+                    <td class="p-4">{row.type}</td>
+                    <td class="p-4">{row.default || "-"}</td>
+                </tr>
+            )
+        })}
+    </tbody>
+</table>

@@ -8,8 +8,7 @@ const config = {
 	extends: [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/eslint-recommended",
-		"plugin:@typescript-eslint/recommended",
-		"plugin:solid/typescript"
+		"plugin:@typescript-eslint/recommended"
 	],
 	rules: {
 		"@typescript-eslint/no-namespace": "off",
@@ -17,6 +16,10 @@ const config = {
 		"@typescript-eslint/triple-slash-reference": "off"
 	},
 	overrides: [
+		{
+			files: ["**/*.ts", "**/*.tsx"],
+			extends: ["plugin:solid/typescript"]
+		},
 		{
 			files: ["**/*.spec.{ts,tsx}"],
 			plugins: ["vitest"],

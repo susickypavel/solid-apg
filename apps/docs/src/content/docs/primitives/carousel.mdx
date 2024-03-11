@@ -12,7 +12,7 @@ import { Tabs, TabItem } from "@astrojs/starlight/components";
 import Playground from "@/components/playground.astro";
 import Anatomy from "@/components/anatomy.astro";
 import Links from "@/components/links.astro";
-import Table from "@/components/table.astro";
+import PropTable from "@/components/tables/prop-table.astro";
 
 a primitive for creating a carousel component.
 
@@ -31,7 +31,19 @@ import { createCarousel } from "solid-apg";
 
 ## API Reference
 
-<Table />
+<PropTable
+	data={[
+		{
+			name: "Test",
+			type: "x",
+			description: "x",
+			default: "x"
+		},
+		{
+			name: "Test2"
+		}
+	]}
+/>
 
 ## Example
 
