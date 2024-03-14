@@ -53,7 +53,7 @@ importers:
         version: 0.5.6(typescript@5.3.3)
       '@astrojs/solid-js':
         specifier: ^4.0.1
-        version: 4.0.1(solid-js@1.8.14)(vite@5.1.1)
+        version: 4.0.1(solid-js@1.8.14)(vite@5.1.5)
       '@astrojs/starlight':
         specifier: ^0.21.1
         version: 0.21.1(astro@4.5.0)
@@ -89,7 +89,7 @@ importers:
         version: 0.11.3(solid-js@1.8.14)
       '@solidjs/start':
         specifier: ^0.5.1
-        version: 0.5.1(solid-js@1.8.14)(vinxi@0.2.1)(vite@5.1.1)
+        version: 0.5.1(solid-js@1.8.14)(vinxi@0.2.1)(vite@5.1.5)
       solid-apg:
         specifier: workspace:0.0.0-next-20240222140455
         version: link:../../packages/solid-apg
@@ -114,6 +114,9 @@ importers:
       tsup:
         specifier: ^8.0.2
         version: 8.0.2(typescript@5.3.3)
+      typedoc:
+        specifier: ^0.25.12
+        version: 0.25.12(typescript@5.3.3)
       vite:
         specifier: ^5.1.1
         version: 5.1.1
@@ -293,14 +296,14 @@ packages:
       zod: 3.22.4
     dev: false
 
-  /@astrojs/solid-js@4.0.1(solid-js@1.8.14)(vite@5.1.1):
+  /@astrojs/solid-js@4.0.1(solid-js@1.8.14)(vite@5.1.5):
     resolution: {integrity: sha512-XjViecwQDEO/e3OWCCORPYtYLS7MUNWvAWGVvNkzhAyVYZbM2fzckp94WkhX/qPu1rPUyNxSMXnN6IXkiVRTwA==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       solid-js: ^1.8.5
     dependencies:
       solid-js: 1.8.14
-      vite-plugin-solid: 2.9.1(solid-js@1.8.14)(vite@5.1.1)
+      vite-plugin-solid: 2.9.1(solid-js@1.8.14)(vite@5.1.5)
     transitivePeerDependencies:
       - '@testing-library/jest-dom'
       - supports-color
@@ -2033,7 +2036,7 @@ packages:
       solid-js: 1.8.14
     dev: false
 
-  /@solidjs/start@0.5.1(solid-js@1.8.14)(vinxi@0.2.1)(vite@5.1.1):
+  /@solidjs/start@0.5.1(solid-js@1.8.14)(vinxi@0.2.1)(vite@5.1.5):
     resolution: {integrity: sha512-5LJoI3+kRr3Uuxik+5YAuNwEUWsk1/+LBD3cDK2LQIPk3uKyNRoZM8ZU1WTyNQmaoBDXe6Z4Sldbo+DXoZL+9g==}
     dependencies:
       '@vinxi/plugin-directives': 0.2.0(vinxi@0.2.1)
@@ -2048,8 +2051,8 @@ packages:
       shikiji: 0.9.19
       source-map-js: 1.0.2
       terracotta: 1.0.5(solid-js@1.8.14)
-      vite-plugin-inspect: 0.7.42(vite@5.1.1)
-      vite-plugin-solid: 2.9.1(solid-js@1.8.14)(vite@5.1.1)
+      vite-plugin-inspect: 0.7.42(vite@5.1.5)
+      vite-plugin-solid: 2.9.1(solid-js@1.8.14)(vite@5.1.5)
     transitivePeerDependencies:
       - '@nuxt/kit'
       - '@testing-library/jest-dom'
@@ -2819,6 +2822,10 @@ packages:
   /ansi-regex@6.0.1:
     resolution: {integrity: sha512-n5M855fKb2SsfMIiFFoVrABHJC8QtHwVx+mHWP3QcEqBHYienj5dHSgjbxtC0WEZXYt4wcD6zrQElDPhFuZgfA==}
     engines: {node: '>=12'}
+
+  /ansi-sequence-parser@1.1.1:
+    resolution: {integrity: sha512-vJXt3yiaUL4UU546s3rPXlsry/RnM730G1+HkpKE012AN0sx1eOrxSu95oKDIonskeLTijMgqWZ3uDEe3NFvyg==}
+    dev: true
 
   /ansi-styles@3.2.1:
     resolution: {integrity: sha512-VT0ZI6kZRdTh8YyJw3SMbYm/u+NqfsAxEpWO0Pf9sq8/e94WxxOpPKx9FR1FlyCtOVDNOQ+8ntlqFxiRc+r5qA==}
@@ -6455,6 +6462,10 @@ packages:
     dependencies:
       yallist: 4.0.0
 
+  /lunr@2.3.9:
+    resolution: {integrity: sha512-zTU3DaZaF3Rt9rhN3uBMGQD3dD2/vFQqnvZCDv4dl5iOzq2IZQqTxu90r4E5J+nP70J3ilqVCrbho2eWaeW8Ow==}
+    dev: true
+
   /lz-string@1.5.0:
     resolution: {integrity: sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==}
     hasBin: true
@@ -6518,6 +6529,12 @@ packages:
   /markdown-table@3.0.3:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
     dev: false
+
+  /marked@4.3.0:
+    resolution: {integrity: sha512-PRsaiG84bK+AMvxziE/lCFss8juXjNaWzVbN5tXAm4XjeaS9NAHhop+PjQxz2A9h8Q4M/xGmzP8vqNwy6JeK0A==}
+    engines: {node: '>= 12'}
+    hasBin: true
+    dev: true
 
   /mdast-util-definitions@6.0.0:
     resolution: {integrity: sha512-scTllyX6pnYNZH/AIp/0ePz6s4cZtARxImwoPJ7kS42n+MnVsI4XbnG6d4ibehRIldYMWM2LD7ImQblVhUejVQ==}
@@ -8914,6 +8931,15 @@ packages:
     resolution: {integrity: sha512-6j1W9l1iAs/4xYBI1SYOVZyFcCis9b4KCLQ8fgAGG07QvzaRLVVRQvAy85yNmmZSjYjg4MWh4gNvlPujU/5LpA==}
     dev: true
 
+  /shiki@0.14.7:
+    resolution: {integrity: sha512-dNPAPrxSc87ua2sKJ3H5dQ/6ZaY8RNnaAqK+t0eG7p0Soi2ydiqbGOTaZCqaYvA/uZYfS1LJnemt3Q+mSfcPCg==}
+    dependencies:
+      ansi-sequence-parser: 1.1.1
+      jsonc-parser: 3.2.1
+      vscode-oniguruma: 1.7.0
+      vscode-textmate: 8.0.0
+    dev: true
+
   /shiki@1.1.7:
     resolution: {integrity: sha512-9kUTMjZtcPH3i7vHunA6EraTPpPOITYTdA5uMrvsJRexktqP0s7P3s9HVK80b4pP42FRVe03D7fT3NmJv2yYhw==}
     dependencies:
@@ -9748,6 +9774,20 @@ packages:
       for-each: 0.3.3
       is-typed-array: 1.1.13
 
+  /typedoc@0.25.12(typescript@5.3.3):
+    resolution: {integrity: sha512-F+qhkK2VoTweDXd1c42GS/By2DvI2uDF4/EpG424dTexSHdtCH52C6IcAvMA6jR3DzAWZjHpUOW+E02kyPNUNw==}
+    engines: {node: '>= 16'}
+    hasBin: true
+    peerDependencies:
+      typescript: 4.6.x || 4.7.x || 4.8.x || 4.9.x || 5.0.x || 5.1.x || 5.2.x || 5.3.x || 5.4.x
+    dependencies:
+      lunr: 2.3.9
+      marked: 4.3.0
+      minimatch: 9.0.3
+      shiki: 0.14.7
+      typescript: 5.3.3
+    dev: true
+
   /typesafe-path@0.2.2:
     resolution: {integrity: sha512-OJabfkAg1WLZSqJAJ0Z6Sdt3utnbzr/jh+NAHoyWHJe8CMSy79Gm085094M9nvTPy22KzTVn5Zq5mbapCI/hPA==}
     dev: false
@@ -10309,7 +10349,7 @@ packages:
       - supports-color
     dev: false
 
-  /vite-plugin-inspect@0.7.42(vite@5.1.1):
+  /vite-plugin-inspect@0.7.42(vite@5.1.5):
     resolution: {integrity: sha512-JCyX86wr3siQc+p9Kd0t8VkFHAJag0RaQVIpdFGSv5FEaePEVB6+V/RGtz2dQkkGSXQzRWrPs4cU3dRKg32bXw==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -10327,7 +10367,7 @@ packages:
       open: 9.1.0
       picocolors: 1.0.0
       sirv: 2.0.4
-      vite: 5.1.1
+      vite: 5.1.5
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -10375,6 +10415,29 @@ packages:
       vitefu: 0.2.5(vite@5.1.1)
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /vite-plugin-solid@2.9.1(solid-js@1.8.14)(vite@5.1.5):
+    resolution: {integrity: sha512-RC4hj+lbvljw57BbMGDApvEOPEh14lwrr/GeXRLNQLcR1qnOdzOwwTSFy13Gj/6FNIZpBEl0bWPU+VYFawrqUw==}
+    peerDependencies:
+      '@testing-library/jest-dom': ^5.16.6 || ^5.17.0 || ^6.*
+      solid-js: ^1.7.2
+      vite: ^3.0.0 || ^4.0.0 || ^5.0.0
+    peerDependenciesMeta:
+      '@testing-library/jest-dom':
+        optional: true
+    dependencies:
+      '@babel/core': 7.23.9
+      '@types/babel__core': 7.20.5
+      babel-preset-solid: 1.8.12(@babel/core@7.23.9)
+      merge-anything: 5.1.7
+      solid-js: 1.8.14
+      solid-refresh: 0.6.3(solid-js@1.8.14)
+      vite: 5.1.5
+      vitefu: 0.2.5(vite@5.1.5)
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
 
   /vite@4.5.0:
     resolution: {integrity: sha512-ulr8rNLA6rkyFAlVWw2q5YJ91v098AFQ2R0PRFwPzREXOUJQPtFUG0t+/ZikhaOCDqFoDhN6/v8Sq0o4araFAw==}
@@ -10444,6 +10507,7 @@ packages:
       rollup: 4.9.6
     optionalDependencies:
       fsevents: 2.3.3
+    dev: true
 
   /vite@5.1.5:
     resolution: {integrity: sha512-BdN1xh0Of/oQafhU+FvopafUp6WaYenLU/NFoL5WyJL++GxkNfieKzBhM24H3HVsPQrlAqB7iJYTHabzaRed5Q==}
@@ -10500,6 +10564,7 @@ packages:
         optional: true
     dependencies:
       vite: 5.1.1
+    dev: true
 
   /vitefu@0.2.5(vite@5.1.5):
     resolution: {integrity: sha512-SgHtMLoqaeeGnd2evZ849ZbACbnwQCIwRH57t18FxcXoZop0uQu0uzlIhJBlF/eWVzuce0sHeqPcDo+evVcg8Q==}
@@ -10701,6 +10766,14 @@ packages:
   /vscode-nls@5.2.0:
     resolution: {integrity: sha512-RAaHx7B14ZU04EU31pT+rKz2/zSl7xMsfIZuo8pd+KZO6PXtQmpevpq3vxvWNcrGbdmhM/rr5Uw5Mz+NBfhVng==}
     dev: false
+
+  /vscode-oniguruma@1.7.0:
+    resolution: {integrity: sha512-L9WMGRfrjOhgHSdOYgCt/yRMsXzLDJSL7BPrOZt73gU0iWO4mpqzqQzOz5srxqTvMBaR0XZTSrVWo4j55Rc6cA==}
+    dev: true
+
+  /vscode-textmate@8.0.0:
+    resolution: {integrity: sha512-AFbieoL7a5LMqcnOF04ji+rpXadgOXnZsxQr//r83kLPr7biP7am3g9zbaZIaBGwBRWeSvoMD4mgPdX3e4NWBg==}
+    dev: true
 
   /vscode-uri@2.1.2:
     resolution: {integrity: sha512-8TEXQxlldWAuIODdukIb+TR5s+9Ds40eSJrw+1iDDA9IFORPjMELarNQE3myz5XIkWWpdprmJjm1/SxMlWOC8A==}

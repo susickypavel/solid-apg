@@ -1,1 +1,3 @@
-export interface Arguments {}
+export interface FeedProps {
+	todo: string;
+}
