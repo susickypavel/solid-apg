@@ -1,6 +1,7 @@
 export * from "./lib/carousel";
 export * from "./lib/feed";
 export * from "./lib/tabs";
+export * from "./lib/spinbutton";
 export * from "./lib/toolbar";
 export * from "./lib/tooltip";
 

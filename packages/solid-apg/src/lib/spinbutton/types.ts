@@ -1,3 +1,3 @@
-export interface Arguments<T> {
+export interface SpinButtonArguments<T> {
 	values: T[];
 }

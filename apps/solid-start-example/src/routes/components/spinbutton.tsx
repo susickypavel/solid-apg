@@ -1,10 +1,12 @@
 import { Title } from "@solidjs/meta";
 
-export default function SpinButton() {
+import { SpinButton } from "~/components/common/SpinButton";
+
+export default function SpinButtonPage() {
 	return (
 		<main>
 			<Title>Components / SpinButton</Title>
-			<p>SpinButton</p>
+			<SpinButton />
 		</main>
 	);
 }
