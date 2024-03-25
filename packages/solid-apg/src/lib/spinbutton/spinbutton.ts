@@ -1,6 +1,10 @@
+import type { Arguments } from "./types";
+
 /**
- * @link TODO
+ * Creates a Spinbutton bindings according to the WAI-ARIA specification.
+ *
+ * @link https://www.w3.org/WAI/ARIA/apg/patterns/spinbutton
  */
-export function createSpinbutton() {
-	return [];
+export function createSpinbutton<T>(args: Arguments<T>) {
+	return args.values;
 }
