@@ -1,4 +1,5 @@
 import { createSignal } from "solid-js";
+import { combineProps } from "@solid-primitives/props";
 import type { SpinButtonArguments } from "./types";
 
 /**
@@ -21,17 +22,19 @@ export function createSpinbutton<T>(args: SpinButtonArguments<T>) {
 		});
 	};
 
+	const baseProps = {
+		get role() {
+			return role();
+		}
+	};
+
+	const props = combineProps(baseProps);
+
 	return [
 		{
 			up,
 			down
 		},
-		{
-			get props() {
-				return {
-					role: role()
-				};
-			}
-		}
+		props
 	];
 }
