@@ -6,16 +6,37 @@ import { createSpinbutton } from "../../../../../packages/solid-apg/src";
 export interface SpinButtonProps extends JSX.InputHTMLAttributes<HTMLInputElement> {}
 
 export function SpinButton() {
-	const [{ up, down }, props, state] = createSpinbutton({
+	const {
+		elements: { up, down },
+		props,
+		buttonProps,
+		state
+	} = createSpinbutton({
 		values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+		mapping: [
+			"monday",
+			"tuesday",
+			"wednesday",
+			"thursday",
+			"rockstar",
+			"every",
+			"day",
+			"friday",
+			"saturday",
+			"sunday"
+		],
 		step: 5
 	});
 
 	return (
-		<div {...props}>
-			<button use:up>up</button>
-			<div>{state.value}</div>
-			<button use:down>down</button>
+		<div>
+			<button use:up {...buttonProps}>
+				up
+			</button>
+			<input type="text" {...props} value={state.value} />
+			<button use:down {...buttonProps}>
+				down
+			</button>
 		</div>
 	);
 }

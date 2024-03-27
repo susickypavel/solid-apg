@@ -1,10 +1,11 @@
-import { JSX, createSignal, mergeProps, onCleanup } from "solid-js";
+import { DEV, JSX, createSignal, mergeProps, onCleanup } from "solid-js";
+import { isServer } from "solid-js/web";
 import { combineProps } from "@solid-primitives/props";
-import type { SpinButtonArguments } from "./types";
+import type { DefaultSpinButtonArguments, SpinButtonArguments } from "./types";
 
 const defaultProps = {
 	step: 1
-} satisfies Partial<SpinButtonArguments<unknown>>;
+} satisfies DefaultSpinButtonArguments;
 
 /**
  * Creates a Spinbutton bindings according to the WAI-ARIA specification.
@@ -21,7 +22,7 @@ export function createSpinbutton<T>(args: SpinButtonArguments<T>) {
 	const prev = (_: Event | null, step = 1) =>
 		setSelectedIndex((selectedIndex() - step + args.values.length) % args.values.length);
 
-	const handleKeydown = (event: KeyboardEvent) => {
+	const onKeyDown = (event: KeyboardEvent) => {
 		switch (event.key) {
 			case "ArrowUp":
 				next(null);
@@ -63,7 +64,31 @@ export function createSpinbutton<T>(args: SpinButtonArguments<T>) {
 	const baseProps: JSX.HTMLAttributes<any> = {
 		role: "spinbutton",
 		tabindex: "1",
-		onKeyDown: handleKeydown
+		onKeyDown,
+		get "aria-valuenow"() {
+			return selectedIndex();
+		},
+		get "aria-valuemin"() {
+			return 0;
+		},
+		get "aria-valuemax"() {
+			return args.values.length - 1;
+		},
+		get "aria-valuetext"() {
+			if (!args.mapping) return undefined;
+
+			if (DEV && !isServer) {
+				if (args.mapping.length !== args.values.length) {
+					console.warn("[solid-apg]: Mapping length should be equal to values length.");
+				}
+			}
+
+			return args.mapping[selectedIndex()];
+		}
+	};
+
+	const buttonProps: JSX.HTMLAttributes<any> = {
+		tabIndex: "-1"
 	};
 
 	const props = combineProps(baseProps);
@@ -74,12 +99,13 @@ export function createSpinbutton<T>(args: SpinButtonArguments<T>) {
 		}
 	});
 
-	return [
-		{
+	return {
+		elements: {
 			up,
 			down
 		},
 		props,
+		buttonProps,
 		state
-	] as const;
+	} as const;
 }
