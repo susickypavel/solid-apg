@@ -60,7 +60,7 @@ export function createSpinbutton<T>(args: SpinButtonArguments<T>) {
 		});
 	};
 
-	const baseProps: JSX.HTMLAttributes<HTMLElement> = {
+	const baseProps: JSX.HTMLAttributes<any> = {
 		role: "spinbutton",
 		tabindex: "1",
 		onKeyDown: handleKeydown
