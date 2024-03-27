@@ -1,6 +1,10 @@
-import { JSX, createSignal, onCleanup } from "solid-js";
+import { JSX, createSignal, mergeProps, onCleanup } from "solid-js";
 import { combineProps } from "@solid-primitives/props";
 import type { SpinButtonArguments } from "./types";
+
+const defaultProps = {
+	step: 1
+} satisfies Partial<SpinButtonArguments<unknown>>;
 
 /**
  * Creates a Spinbutton bindings according to the WAI-ARIA specification.
@@ -8,16 +12,19 @@ import type { SpinButtonArguments } from "./types";
  * @link https://www.w3.org/WAI/ARIA/apg/patterns/spinbutton
  */
 export function createSpinbutton<T>(args: SpinButtonArguments<T>) {
+	const local = mergeProps(defaultProps, args);
+
 	const [selectedIndex, setSelectedIndex] = createSignal(0);
 
 	const value = () => args.values[selectedIndex()];
-	const next = () => setSelectedIndex((selectedIndex() + 1) % args.values.length);
-	const prev = () => setSelectedIndex((selectedIndex() - 1 + args.values.length) % args.values.length);
+	const next = (_: Event | null, step = 1) => setSelectedIndex((selectedIndex() + step) % args.values.length);
+	const prev = (_: Event | null, step = 1) =>
+		setSelectedIndex((selectedIndex() - step + args.values.length) % args.values.length);
 
 	const handleKeydown = (event: KeyboardEvent) => {
 		switch (event.key) {
 			case "ArrowUp":
-				next();
+				next(null);
 				break;
 			case "Home":
 				setSelectedIndex(0);
@@ -26,7 +33,13 @@ export function createSpinbutton<T>(args: SpinButtonArguments<T>) {
 				setSelectedIndex(args.values.length - 1);
 				break;
 			case "ArrowDown":
-				prev();
+				prev(null);
+				break;
+			case "PageUp":
+				next(null, local.step);
+				break;
+			case "PageDown":
+				prev(null, local.step);
 				break;
 		}
 	};

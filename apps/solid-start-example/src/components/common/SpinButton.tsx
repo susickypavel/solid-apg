@@ -7,7 +7,8 @@ interface SpinButtonProps extends JSX.InputHTMLAttributes<HTMLInputElement> {}
 
 export function SpinButton(x: SpinButtonProps) {
 	const [{ up, down }, props, state] = createSpinbutton({
-		values: [1, 2, 3]
+		values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+		step: 5
 	});
 
 	return (
