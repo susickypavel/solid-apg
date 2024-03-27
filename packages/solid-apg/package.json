@@ -43,9 +43,6 @@
             "carousel": [
                 "./dist/lib/carousel/index.d.ts"
             ],
-            "checkbox": [
-                "./dist/lib/checkbox/index.d.ts"
-            ],
             "feed": [
                 "./dist/lib/feed/index.d.ts"
             ],
